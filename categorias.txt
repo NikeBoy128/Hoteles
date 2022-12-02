@@ -1,0 +1,4 @@
+1,Cama_Sencilla
+2,Cama_Doble
+3,Dos_Camas_Sencillas
+4,Tres_Camas_Sencillas
