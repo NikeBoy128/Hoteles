@@ -1,5 +1,7 @@
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -79,6 +81,30 @@ class Lista_Reservaciones {
 
             System.out.println(aux.getId_reserva()+" Hotel "+aux.getId_hotel().getNombre()+" Calidad estrellas  "+aux.getId_hotel().getCalidad()+" "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" Cliente "+aux.getId_cliente().getNombre()+" Numero Habtiaciones "+aux.getNumero_habitaciones()+" Total Reserva "+valolr);
         }
+    }
+
+    public void reportereservas(){
+        String path="D:\\clase itp\\ejercicios individuales resueltos\\Taller_Final\\Reservaciones\\REPORTE_RESERVAS.txt";
+        File file =new File(path);
+        String reportetex="";
+        for(Reservaciones aux:lista_reservaciones){
+            int valor=0;
+            valor+=(aux.calular())*aux.getNumero_habitaciones();
+            reportetex+=aux.getId_reserva()+" \t Hotel "+aux.getId_hotel().getNombre()+" \t Calidad estrellas  "+aux.getId_hotel().getCalidad()+" \t "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" \t Cliente "+aux.getId_cliente().getNombre()+" \t Numero Habtiaciones "+aux.getNumero_habitaciones()+" \t Total Reserva "+valor+"\n";
+        }
+        try{
+            file.createNewFile();
+            FileWriter fw= new FileWriter(file);
+            BufferedWriter bw= new BufferedWriter(fw);
+            bw.write(reportetex);
+            bw.close();
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
+
     }
 
 

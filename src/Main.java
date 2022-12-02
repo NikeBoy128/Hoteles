@@ -16,6 +16,7 @@
           Lista_Reservaciones lista_reservaciones=new Lista_Reservaciones();
           lista_reservaciones=lista_reservaciones.obtenerdatos(lista_hotel,lista_habitaciones,lista_clientes);
           lista_reservaciones.imprimir();
+          lista_reservaciones.reportereservas();
 
 
 
