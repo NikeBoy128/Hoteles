@@ -77,13 +77,14 @@ class Lista_Reservaciones {
     public  void imprimir(){
 
         for(Reservaciones aux:lista_reservaciones){
-            int valolr= (aux.calular())*aux.getDias();
-            valolr=valolr*aux.getDias();
+            int valor=0;
+            valor+=(aux.calular())*aux.getNumero_habitaciones();
+            valor=valor*aux.getDias();
 
 
 
 
-            System.out.println(aux.getId_reserva()+" Hotel "+aux.getId_hotel().getNombre()+" Calidad estrellas  "+aux.getId_hotel().getCalidad()+" "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" Cliente "+aux.getId_cliente().getNombre()+" Numero Habtiaciones "+aux.getNumero_habitaciones()+" Numero dias  "+aux.getDias()+" total a pagar "+valolr);
+            System.out.println(aux.getId_reserva()+" Hotel "+aux.getId_hotel().getNombre()+" Calidad estrellas  "+aux.getId_hotel().getCalidad()+" "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" Cliente "+aux.getId_cliente().getNombre()+" Numero Habtiaciones "+aux.getNumero_habitaciones()+" Numero dias  "+aux.getDias()+" total a pagar "+valor);
         }
     }
 
