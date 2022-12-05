@@ -42,6 +42,7 @@ class Lista_Reservaciones {
                     reservacion.setId_habitacion(lista_habitaciones.buscar2(atributo.nextElement().toString()));
                     reservacion.setId_cliente(lista_clientes.buscar2(atributo.nextElement().toString()));
                     reservacion.setNumero_habitaciones(Integer.parseInt(atributo.nextElement().toString()));
+                    reservacion.setDias(Integer.parseInt(atributo.nextElement().toString()));
 
 
 
@@ -76,10 +77,13 @@ class Lista_Reservaciones {
     public  void imprimir(){
 
         for(Reservaciones aux:lista_reservaciones){
-            int valolr= (aux.calular())*aux.getNumero_habitaciones();
+            int valolr= (aux.calular())*aux.getDias();
+            valolr=valolr*aux.getDias();
 
 
-            System.out.println(aux.getId_reserva()+" Hotel "+aux.getId_hotel().getNombre()+" Calidad estrellas  "+aux.getId_hotel().getCalidad()+" "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" Cliente "+aux.getId_cliente().getNombre()+" Numero Habtiaciones "+aux.getNumero_habitaciones()+" Total Reserva "+valolr);
+
+
+            System.out.println(aux.getId_reserva()+" Hotel "+aux.getId_hotel().getNombre()+" Calidad estrellas  "+aux.getId_hotel().getCalidad()+" "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" Cliente "+aux.getId_cliente().getNombre()+" Numero Habtiaciones "+aux.getNumero_habitaciones()+" Numero dias  "+aux.getDias()+" total a pagar "+valolr);
         }
     }
 
@@ -90,7 +94,9 @@ class Lista_Reservaciones {
         for(Reservaciones aux:lista_reservaciones){
             int valor=0;
             valor+=(aux.calular())*aux.getNumero_habitaciones();
-            reportetex+=aux.getId_reserva()+" \t Hotel "+aux.getId_hotel().getNombre()+" \t Calidad estrellas  "+aux.getId_hotel().getCalidad()+" \t "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" \t Cliente "+aux.getId_cliente().getNombre()+" \t Numero Habtiaciones "+aux.getNumero_habitaciones()+" \t Total Reserva "+valor+"\n";
+            valor=valor*aux.getDias();
+
+            reportetex+=aux.getId_reserva()+" \t Hotel "+aux.getId_hotel().getNombre()+" \t Calidad estrellas  "+aux.getId_hotel().getCalidad()+" \t "+aux.getId_habitacion().getNombre_categoria().getDescripcion()+" \t Cliente "+aux.getId_cliente().getNombre()+" \t Numero Habtiaciones "+aux.getNumero_habitaciones()+" \t Total dias "+aux.getDias()+" \t Total reserva "+valor+"\n";
         }
         try{
             file.createNewFile();

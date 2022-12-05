@@ -1,4 +1,4 @@
-1 	 Hotel Royal 	 Calidad estrellas  3 	 Cama_Sencilla 	 Cliente Jose 	 Numero Habtiaciones 4 	 Total Reserva 200
-2 	 Hotel Pacifico 	 Calidad estrellas  5 	 Cama_Doble 	 Cliente Harold 	 Numero Habtiaciones 2 	 Total Reserva 240
-3 	 Hotel Andino 	 Calidad estrellas  4 	 Dos_Camas_Sencillas 	 Cliente Raul 	 Numero Habtiaciones 5 	 Total Reserva 600
-4 	 Hotel Royal 	 Calidad estrellas  3 	 Tres_Camas_Sencillas 	 Cliente Pedro 	 Numero Habtiaciones 1 	 Total Reserva 140
+1 	 Hotel Royal 	 Calidad estrellas  3 	 Cama_Sencilla 	 Cliente Jose 	 Numero Habtiaciones 4 	 Total dias 1 	 Total reserva 200
+2 	 Hotel Pacifico 	 Calidad estrellas  5 	 Cama_Doble 	 Cliente Harold 	 Numero Habtiaciones 2 	 Total dias 2 	 Total reserva 480
+3 	 Hotel Andino 	 Calidad estrellas  4 	 Dos_Camas_Sencillas 	 Cliente Raul 	 Numero Habtiaciones 5 	 Total dias 3 	 Total reserva 1800
+4 	 Hotel Royal 	 Calidad estrellas  3 	 Tres_Camas_Sencillas 	 Cliente Pedro 	 Numero Habtiaciones 1 	 Total dias 5 	 Total reserva 700

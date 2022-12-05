@@ -4,17 +4,27 @@
     private Habitaciones id_habitacion;
     private Cliente id_cliente;
     private int numero_habitaciones;
+    private  int dias;
 
-     public Reservaciones(String id_reserva, Hotel id_hotel, Habitaciones id_habitacion, Cliente id_cliente, int numero_habitaciones) {
+     public Reservaciones(String id_reserva, Hotel id_hotel, Habitaciones id_habitacion, Cliente id_cliente, int numero_habitaciones,int dias) {
          this.id_reserva = id_reserva;
          this.id_hotel = id_hotel;
          this.id_habitacion = id_habitacion;
          this.id_cliente = id_cliente;
          this.numero_habitaciones = numero_habitaciones;
+         this.dias=dias;
      }
 
      public Reservaciones() {
 
+     }
+
+     public int getDias() {
+         return dias;
+     }
+
+     public void setDias(int dias) {
+         this.dias = dias;
      }
 
      public String getId_reserva() {
